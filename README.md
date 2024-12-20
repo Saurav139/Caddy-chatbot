@@ -18,15 +18,19 @@ This is a FastAPI-based chatbot, inspired by the original [Caddy Chatbot](https:
    ```bash
    git clone https://github.com/Saurav139/caddy-chatbot-healthiai.git
    cd caddy-chatbot-healthiai
-2. ** Configure AWS credentials **
+2. **Configure AWS credentials**
+   ```bash
    aws configure
-3. ** Start the fast API server **
-  make run-dev
-4. ** Access the API Docs **
-Swagger UI: http://localhost:8080/docs
+3. **Start the fast API server**
+   ```bash
+     make run-dev
+4. **Access the API Docs**
+
+   Swagger UI: http://localhost:8080/docs
 5. ** Changes from the Original **
-Model: amazon.titan-embed-text-v2:0 instead of the orginal cohere model
-Region: us-east-2 instead of Eurpoean region
+   ```bash 
+   Model: amazon.titan-embed-text-v2:0 instead of the orginal cohere model
+   Region: us-east-2 instead of Eurpoean region
 
 
 
