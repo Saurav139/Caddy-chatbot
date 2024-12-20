@@ -1,0 +1,62 @@
+[tool.poetry]
+name = "caddy-chatbot"
+version = "0.0.9"
+description = "An AI powered copilot for customer service agents"
+authors = ["i.AI <i-dot-ai-enquiries@cabinetoffice.gov.uk>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+pydantic-settings = "^2.2.1"
+google-auth = "^2.29.0"
+google-api-python-client = "^2.125.0"
+presidio-analyzer = "^2.2.354"
+presidio-anonymizer = "^2.2.354"
+langchain = ">=0.2.9,<0.3.0"
+opensearch-py = "^2.5.0"
+requests-aws4auth = "^1.2.3"
+sentence-transformers = "^2.6.1"
+langchain-community = "0.2.9"
+pydantic = "^2.6.4"
+
+
+
+
+
+fastapi = "^0.110.1"
+uvicorn = "^0.29.0"
+oauth2client = "^4.1.3"
+boto3 = "^1.34.79"
+pytz = "^2024.1"
+semantic-router = {extras = ["postgres", "bedrock"], version = "^0.0.72"}
+thefuzz = "^0.22.1"
+python-dotenv = "^1.0.1"
+langchain-aws = "^0.1.17"
+cohere = "5.9.2"
+msal = "^1.31.0"
+cfn-flip = "^1.3.0"
+pytest = "^8.3.3"
+psycopg2-binary = "^2.9.10"
+
+[tool.poetry.group.dev.dependencies]
+aws-sam-cli = "^1.114.0"
+ipykernel = "^6.29.5"
+ruff = "^0.7.0"
+
+[tool.pytest.ini_options]
+env = [
+    "STAGE=test"
+]
+filterwarnings = [
+    "ignore::DeprecationWarning:botocore.auth"
+]
+log_file = "logs/test.log"
+log_file_date_format = "%Y-%m-%d %H:%M:%S"
+log_file_format = "%(asctime)s - %(name)s %(levelname)s %(message)s"
+log_file_level = "INFO"
+log_file_mode = "a"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
